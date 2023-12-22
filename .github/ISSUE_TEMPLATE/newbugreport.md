@@ -1,15 +1,9 @@
 ---
-name: NewBugReport
-about: this is bug report
-title: "[Bug]: "
-labels: bug
-assignees: ''
-
----
 
 name: NewBugReport
 description: File a bug report
 title: "[Bug]: "
+about: this is bug report
 labels: ["bug", "triage"]
 assignees: 
  - octocat
@@ -25,7 +19,7 @@ body:
      label: Contract Details
      description: Also tell us, what did you expect to happen?
      placeholder: ex. email@example.com
-   validations:
+   validation:
      required: false
  - type: textarea
    id: what-happened
@@ -34,25 +28,25 @@ body:
      description: Also tell us, what did you expect to happen?
      placeholder: Tell us what you see!
      value: "A bug happened!"
-   validations:
+   validation:
      required: true
  - type: dropdown
    id: Version
    attributes:
      label: Version
      description: What version of our software are you running?
-     options:
+     option:
        - 1.0.2 (Default)
        - 1.0.3 (Edge)
      default: 0
-   validations:
+   validation:
      required: true
  - type: dropdown
    id: browsers
    attributes:
      label: What browsers are you seeing the problem on?
      multiple: true
-     options:
+     option:
        - Firefox
        - Chrome
        - Safari
@@ -68,7 +62,7 @@ body:
    attributes:
      label: Code of Conduct
      description: By submitting this issue, you agree to follow our [Code of Conduct](htpps://example.com)
-     options:
+     option:
        - label: I agree to follow this project's Code of Conduct
          required: true
           
